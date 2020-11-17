@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>animation1</title>
+  </head>
+  <body>
+
+  <div class="square"></div>
+  <style>
+  .square {
+    width: 56px;
+    height: 56px;
+    left: 28px;
+    top: 59px;
+    position: relative;
+    background-color: #A3C347;
+
+    animation-name: green-square;
+    animation-duration: 2s;
+    animation-timing-function: infinite cubic-bezier(.37,.55,.49,.67);
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+    animation-play-state: running;
+    animation-delay: 1s;
+  }
+  @keyframes green-square {
+    0% {
+      left: 0;
+    }
+    50% {
+
+    }
+    100% {
+      left: 200px;
+    }
+  }
+</style>
+
+<div class="square2"></div>
+<style>
+.square2 {
+  width: 56px;
+  height: 56px;
+  left: 150px;
+  top: 440px;
+  position: relative;
+  background-color: #87B2EB;
+
+  animation-name: pulsing;
+  animation-duration: 2s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: normal;
+  animation-play-state: running;
+  animation-delay: 0s;
+}
+@keyframes pulsing {
+  0% {
+    -webkit-transform: scale(0.5, 0.5);
+    transform: scale(0.5, 0.5)
+  }
+  50% {
+    -webkit-transform: scale(1.0, 1.0);
+    transform: scale(1.0, 1.0);
+  }
+  100% {
+    -webkit-transform: scale(0.5, 0.5);
+    transform: scale(0.5, 0.5);
+  }
+}
+</style>
+
+<div class="square3"></div>
+<style>
+.square3 {
+  width: 56px;
+  height: 56px;
+  left: 100px;
+  top: 800px;
+  position: relative;
+  background-color: #531C5F;
+
+  animation-name: purple-square;
+  animation-iteration-count: infinite;
+  animation-direction: normal;
+  animation-play-state: running;
+  animation-delay: 1s;
+  transition-duration: 1s;
+  transition-timing-function: ease;
+}
+.square3:hover {
+  background-color: #FBE63F;
+  border-radius: 50%;
+}
+@keyframes purple-square {
+  0% {
+    left: 0;
+  }
+  100% {
+    left: 200px;
+  }
+}
+</style>
+
+<div class="square5"></div>
+<style>
+.square5 {
+  width: 56px;
+  height: 56px;
+  left: 370px;
+  top: 200px;
+  position: relative;
+  background-color: #2D3809;
+
+  animation-name: green2-square;
+  animation-duration: 2s;
+  animation-timing-function: ease-out;
+  animation-iteration-count: infinite;
+  animation-direction: normal;
+  animation-play-state: running;
+  animation-delay: 1s;
+}
+@keyframes green2-square {
+  15% {
+    left: 521;
+  }
+  40% {
+    left: 650;
+  }
+  50% {
+    left:700px;
+  }
+  100% {
+    left: 730px;
+  }
+}
+</style>
+
+<div class="square6">
+    <div class="box bounce"></div>
+</div>
+<style>
+.square6 {
+  width: 56px;
+  height: 56px;
+  left: 509px;
+  top: 204px;
+  display: flex;
+}
+.box {
+  align-self: flex-end;
+  transform-origin: bottom;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  background-color: #C04E4E;
+  width: 60px;
+  height: 60px;
+}
+.bounce {
+  animation-name: bounce;
+  animation-timing-function: ease;
+}
+@keyframes bounce {
+  0%   { transform: scale(1,1)      translateY(0); }
+  10%  { transform: scale(1.1,.9)   translateY(0); }
+  30%  { transform: scale(.9,1.1)   translateY(-100px); }
+  50%  { transform: scale(1.05,.95) translateY(0); }
+  57%  { transform: scale(1,1)      translateY(-7px); }
+  64%  { transform: scale(1,1)      translateY(0); }
+  100% { transform: scale(1,1)      translateY(0); }
+    }
+</style>
+
+<div class="square7"></div>
+<style>
+.square7 {
+  width: 60px;
+  height: 60px;
+  left: 846px;
+  top: -200px;
+  position: relative;
+  background-color: #FBE63F;
+
+  animation-name: yellow-pulsing;
+  animation-duration: 2s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: normal;
+  animation-play-state: running;
+  animation-delay: 0s;
+}
+@keyframes yellow-pulsing {
+  0% {
+    -webkit-transform: scale(0.10, 0.10);
+    transform: scale(0.10, 0.10)
+  }
+  50% {
+    -webkit-transform: scale(2.0, 2.0);
+    transform: scale(1.0, 1.0);
+  }
+  100% {
+    -webkit-transform: scale(0.10, 0.10);
+    transform: scale(0.5, 0.5);
+  }
+}
+</style>
+
+<div class="square8"></div>
+<style>
+.square8 {
+  width: 56px;
+  height: 56px;
+  left: 700px;
+  top: 400px;
+  position: relative;
+  background-color: #E277B7;
+
+  animation-name: pink-square2;
+  animation-duration: 2s;
+  animation-timing-function: ease;
+  animation-iteration-count: infinite;
+  animation-direction: normal;
+  animation-play-state: running;
+  animation-delay: 1s;
+}
+@keyframes pink-square2 {
+  15% {
+    transform: translateY(8em);
+    animation-timing-function: cubic-bezier(.19,1,.7,1);
+  }
+  25% {
+    transform: translateY(-4em);
+    animation-timing-function: cubic-bezier(.51,.01,.79,.02);
+  }
+  40% {
+    transform: translateY(0em);
+    animation-timing-function: cubic-bezier(.51,.01,.79,.02);
+  }
+  45% {
+    transform: translateY(8em);
+    animation-timing-function: cubic-bezier(.19,1,.7,1);
+  }
+  50% {
+    transform: translateY(3em);
+    animation-timing-function: cubic-bezier(.51,.01,.79,.02);
+  }
+  56% {
+    transform: translateY(8em);
+    animation-timing-function: cubic-bezier(.19,1,.7,1);
+  }
+  60% {
+    transform: translateY(6em);
+    animation-timing-function: cubic-bezier(.51,.01,.79,.02);
+  }
+  66% {
+    transform: translateY(7.5em);
+    animation-timing-function: cubic-bezier(.51,.01,.79,.02);
+  }
+  70%, 100% {
+    transform: translateY(8em);
+    animation-timing-function: cubic-bezier(.19,1,.7,1);
+  }
+}
+
+</style>
+
+<div class="square9"></div>
+<style>
+.square9 {
+  width: 56px;
+  height: 56px;
+  left: 1400px;
+  top: 100px;
+  position: relative;
+  background-color: #F8993E;
+
+  animation-name: orange-square;
+  animation-duration: 2s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: normal;
+  animation-play-state: running;
+  animation-delay: 1s;
+}
+@keyframes orange-square {
+  0% {
+    left: 1400px;
+  }
+  10% {
+    left: 1300px;
+  }
+  30% {
+    left: 1200px;
+  }
+  55% {
+    left: 1100px;
+  }
+  70% {
+    left: 800px;
+  }
+  80% {
+    left: 1000px;
+  }
+  100% {
+    left: 1200px;
+  }
+}
+</style>
+
+<div class="square10"></div>
+<style>
+.square10 {
+  width: 56px;
+  height: 56px;
+  left: 1600px;
+  top: 380px;
+  position: relative;
+  background-color: #063F4B;
+
+  animation-name: bluegreen-square;
+  animation-duration: 2s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: normal;
+  animation-play-state: running;
+  animation-delay: 1s;
+  animation-name: bluegreen-square2;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-duration: 6s;
+
+}
+@keyframes bluegreen-square {
+  0% {
+    left: 846px;
+  }
+  100% {
+    left: 1046px;
+  }
+}
+@keyframes bluegreen-square2 {
+  0% {
+    transform: translateY(-8em);
+    animation-timing-function: cubic-bezier(.51,.01,.79,.02);
+  }
+  15% {
+    transform: translateY(8em);
+    animation-timing-function: cubic-bezier(.19,1,.7,1);
+  }
+  25% {
+    transform: translateY(-4em);
+    animation-timing-function: cubic-bezier(.51,.01,.79,.02);
+  }
+  32.5% {
+    transform: translateY(8em);
+    animation-timing-function: cubic-bezier(.19,1,.7,1);
+  }
+  40% {
+    transform: translateY(0em);
+    animation-timing-function: cubic-bezier(.51,.01,.79,.02);
+  }
+  45% {
+    transform: translateY(8em);
+    animation-timing-function: cubic-bezier(.19,1,.7,1);
+  }
+  50% {
+    transform: translateY(3em);
+    animation-timing-function: cubic-bezier(.51,.01,.79,.02);
+  }
+  56% {
+    transform: translateY(8em);
+    animation-timing-function: cubic-bezier(.19,1,.7,1);
+  }
+  60% {
+    transform: translateY(6em);
+    animation-timing-function: cubic-bezier(.51,.01,.79,.02);
+  }
+  64% {
+    transform: translateY(8em);
+    animation-timing-function: cubic-bezier(.19,1,.7,1);
+  }
+  66% {
+    transform: translateY(7.5em);
+    animation-timing-function: cubic-bezier(.51,.01,.79,.02);
+  }
+  70%, 100% {
+    transform: translateY(8em);
+    animation-timing-function: cubic-bezier(.19,1,.7,1);
+  }
+}
+</style>
+  </body>
+</html>
